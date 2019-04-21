@@ -78,7 +78,7 @@ module.exports = {
 	    template: 'src/template.html'
 		}),
 		new CopyWebpackPlugin([
-			{ from: 'src/assets/export/*', to: './', flatten: true }
+			{ from: 'src/assets/export/*', to: './castle-animation', flatten: true }
 		])
 	]
 }
