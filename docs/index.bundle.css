@@ -24,7 +24,13 @@ img, button {
           user-select: none; }
 
 html {
-  font-size: 16px; }
+  font-size: 10px; }
+  @media (min-width: 1400px) {
+    html {
+      font-size: 16px; } }
+  @media (min-width: 1000px) {
+    html {
+      font-size: 14px; } }
 
 body {
   font-family: 'bebas_neueregular';
@@ -93,14 +99,14 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 201.6px;
-  height: 54px;
+  width: 12.625em;
+  height: 3.375em;
   background-color: rgba(128, 128, 137, 0.4);
   font-family: inherit;
-  font-size: 1.8rem;
+  font-size: initial;
   text-decoration: none;
   border: none;
-  border-radius: 1.8px; }
+  border-radius: 0.125em; }
   .btn::before, .btn::after {
     content: '';
     position: absolute;
@@ -120,6 +126,7 @@ main {
             transform: scale(1.08, 0.75); }
   .btn__content {
     color: #fff;
+    font-size: 1.812em;
     text-transform: uppercase;
     letter-spacing: 0;
     z-index: 1;
@@ -135,11 +142,17 @@ main {
       -webkit-transform: scale(0.92, 1.25);
               transform: scale(0.92, 1.25); }
     .btn:hover .btn__content {
-      letter-spacing: 10px; }
+      letter-spacing: 0.325em; }
   .btn:focus {
     outline: none; }
   .btn:active::before {
     background-color: rgba(255, 0, 255, 0.4); }
+  @media (max-width: 500px) {
+    .btn {
+      position: fixed;
+      left: calc(50vw - 6.312em - 10px);
+      bottom: 4em;
+      font-size: 1.4rem; } }
 
 .main-page-column {
   width: 202px;
@@ -182,10 +195,22 @@ main {
   transition: opacity ease 0.5s, -webkit-transform ease 0.5s;
   transition: opacity ease 0.5s, transform ease 0.5s;
   transition: opacity ease 0.5s, transform ease 0.5s, -webkit-transform ease 0.5s; }
+  @media (max-width: 1260px) {
+    .animation-block {
+      top: initial;
+      bottom: 3vh; } }
   .animation-block.active {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1); }
+    @media (max-width: 500px) {
+      .animation-block.active {
+        opacity: 0.8; } }
+  @media (max-width: 500px) {
+    .animation-block {
+      left: 0;
+      right: 0;
+      margin: auto; } }
 
 .animated {
   -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;

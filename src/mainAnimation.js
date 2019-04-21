@@ -46,9 +46,18 @@ loader
   .load(setup);
 
   //1600 it's primary resoltuion, in this resoultion I have create layout
-const getScalar = () => window.innerWidth * 0.365 / (1600 * 0.365);
+const getScalar = () => window.innerWidth * calcResizeFactor() / (1600 * 0.365);
+const calcResizeFactor = () => {
+  const width = window.innerWidth
+  if (width > 1400) return 0.365;
+  else if (width >= 1000) return 0.35;
+  // else if (width >= 800) return 0.65;
+  else if (width > 500) return 0.4;
+  return 0.85;
+}
 function resize() {
-  renderer.resize(Math.round(window.innerWidth * 0.365), getScalar() * 1100 * 0.76);
+
+  renderer.resize(Math.round(window.innerWidth * calcResizeFactor()), getScalar() * 1100 * 0.76);
   mainContainer.scale.set(getScalar());
 }
 window.addEventListener('resize', resize);

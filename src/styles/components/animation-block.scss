@@ -8,8 +8,23 @@
   opacity: 0;
   transition: opacity ease 0.5s,
               transform ease 0.5s;
+
+  @media (max-width: 1260px) {
+    top: initial;
+    bottom: 3vh;
+  }
   &.active {
       opacity: 1;
       transform: scale3d(1, 1, 1);
+
+      @media (max-width: 500px) {
+        opacity: 0.8;
+      }
+  }
+
+  @media (max-width: 500px) {
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }

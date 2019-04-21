@@ -1,5 +1,3 @@
-$offset-btn: 6px;
-$scale: 1.8;
 $animation-params: 0.5s cubic-bezier(0.68, -0.95, 0.265, 1.95);
 $scale-horizontal: scale(1.08, 0.75);
 $scale-vertical: scale(0.92, 1.25);
@@ -9,14 +7,14 @@ $scale-vertical: scale(0.92, 1.25);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 112px * $scale;
-    height: 30px * $scale;
+    width: 12.625em;
+    height: 3.375em;
     background-color: $color-gray3;
     font-family: inherit;
-    font-size: 1rem * $scale;
+    font-size: initial;
     text-decoration: none;
     border: none;
-    border-radius: 1px * $scale;
+    border-radius: 0.125em;
     &::before, &::after {
         content: '';          
         position: absolute;
@@ -35,6 +33,7 @@ $scale-vertical: scale(0.92, 1.25);
     }
     &__content {
         color: $color-gray1;
+        font-size: 1.812em;
         text-transform: uppercase;   
         letter-spacing: 0;
         z-index: 1;
@@ -50,7 +49,7 @@ $scale-vertical: scale(0.92, 1.25);
             transform: $scale-vertical;
         }
         .btn__content {
-            letter-spacing: 10px;
+            letter-spacing: 0.325em;
             // text-indent: -40px; // Trying to fix safari
         }
     }
@@ -62,4 +61,11 @@ $scale-vertical: scale(0.92, 1.25);
             background-color: rgba(magenta, 0.4);
         }
     }
+
+  @media (max-width: 500px) {
+    position: fixed;
+    left: calc(50vw - 6.312em - 10px);
+    bottom: 4em;
+    font-size: 1.4rem;
+  }
 }
