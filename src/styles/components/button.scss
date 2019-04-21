@@ -1,0 +1,65 @@
+$offset-btn: 6px;
+$scale: 1.8;
+$animation-params: 0.5s cubic-bezier(0.68, -0.95, 0.265, 1.95);
+$scale-horizontal: scale(1.08, 0.75);
+$scale-vertical: scale(0.92, 1.25);
+
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 112px * $scale;
+    height: 30px * $scale;
+    background-color: $color-gray3;
+    font-family: inherit;
+    font-size: 1rem * $scale;
+    text-decoration: none;
+    border: none;
+    border-radius: 1px * $scale;
+    &::before, &::after {
+        content: '';          
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $color-gray3;
+        border-radius: inherit;
+        transition: transform $animation-params,
+                    background-color 0.5s linear;
+    }
+    &::before {
+        transform: $scale-vertical
+    }
+    &::after {   
+        transform: $scale-horizontal;
+    }
+    &__content {
+        color: $color-gray1;
+        text-transform: uppercase;   
+        letter-spacing: 0;
+        z-index: 1;
+        transition: letter-spacing $animation-params;
+    }
+    &:hover {
+        cursor: pointer;
+        &::before {
+            background-color: $color-accent--light;
+            transform: $scale-horizontal;
+        }
+        &::after {   
+            transform: $scale-vertical;
+        }
+        .btn__content {
+            letter-spacing: 10px;
+            // text-indent: -40px; // Trying to fix safari
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        &::before {
+            background-color: rgba(magenta, 0.4);
+        }
+    }
+}

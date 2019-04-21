@@ -1,0 +1,48 @@
+.description {
+    margin-top: 3rem;
+    font-size: 3rem;
+    &__sm {
+        font-size: 1em;
+        line-height: 1em;
+                transition: transform 1s ease-in-out,
+                    opacity 1s ease-in-out,
+                    letter-spacing 1s ease-in-out;
+    }
+    &__md {
+        font-size: 1.7em;
+        line-height: 1em;
+                transition: transform 1s ease-in-out,
+                    opacity 1s ease-in-out,
+                    letter-spacing 1s ease-in-out;
+    }
+    &__lg {
+        font-size: 2.3em;
+        line-height: 1em;
+                transition: transform 1s ease-in-out,
+                    opacity 1s ease-in-out,
+                    letter-spacing 1s ease-in-out;
+    }
+    &__char {
+        line-height: 1em;
+        font-size: 0.7em;
+                transition: transform 1s ease-in-out,
+                    opacity 1s ease-in-out,
+                    letter-spacing 1s ease-in-out;
+    }
+    &__char--special {
+        margin: 0 0.5rem;
+        font-size: 0.7em;
+                transition: transform 1s ease-in-out,
+                    opacity 1s ease-in-out,
+                    letter-spacing 1s ease-in-out;
+    }
+}
+
+.btn {
+    margin-top: 3rem;
+}
+
+.main-page__main-btn {
+    margin-top: 20vh;
+    margin-left: 7vw;
+}

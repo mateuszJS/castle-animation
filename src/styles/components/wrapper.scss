@@ -1,0 +1,10 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  overflow: hidden;
+  &--slim {
+    padding: 40px 6vw;
+  }
+}
